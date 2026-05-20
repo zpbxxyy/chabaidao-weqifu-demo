@@ -666,8 +666,8 @@ body{overflow-x:hidden;font-feature-settings:"tnum" on,"lnum" on}
 .d4-timeline .tl-title{font-size:13px;font-weight:600;letter-spacing:-0.2px}
 .d4-timeline .tl-meta{font-size:11px;color:var(--text-3);letter-spacing:0.5px}
 .d4-timeline .tl-track{position:relative;padding:0 24px 8px 24px}
-.d4-timeline .tl-line{position:absolute;left:24px;right:24px;top:53px;height:2px;background:var(--border-2);border-radius:2px}
-.d4-timeline .tl-line.done{background:var(--d4)}
+.d4-timeline .tl-line-base{position:absolute;left:24px;right:24px;top:53px;height:2px;background:var(--border-2);border-radius:2px}
+.d4-timeline .tl-line{position:absolute;left:24px;top:53px;height:2px;background:var(--d4);border-radius:2px;transition:width 600ms ease}
 .d4-timeline .tl-stages{position:relative;display:grid;grid-template-columns:repeat(4,1fr);align-items:start}
 .d4-stage{position:relative;cursor:pointer;transition:all 180ms ease;display:flex;flex-direction:column;align-items:center;gap:0}
 .d4-stage .sc{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--d4-deep);background:var(--d4-mist);border:1px solid var(--d4-mist-2);padding:3px 12px;border-radius:100px;white-space:nowrap;margin-bottom:14px;transition:all 200ms ease;min-width:48px;text-align:center;visibility:hidden}
@@ -1130,8 +1130,8 @@ body{overflow-x:hidden;font-feature-settings:"tnum" on,"lnum" on}
           <div class="tl-meta" id="d4-tl-meta">当前位于：经营期 第 6 个月 · 指数刷新自经营数据</div>
         </div>
         <div class="tl-track">
-          <div class="tl-line done" id="d4-tl-line" style="width:62%"></div>
-          <div class="tl-line" style="left:auto;width:38%;right:24px;background:var(--border-2)"></div>
+          <div class="tl-line-base"></div>
+          <div class="tl-line" id="d4-tl-line" style="width:62%"></div>
           <div class="tl-stages" id="d4-stages">
             <div class="d4-stage done" data-stage="apply"><div class="sc">90</div><div class="dot"></div><div class="label">① 申请期</div><div class="sub">T0 · 资料预审</div></div>
             <div class="d4-stage done" data-stage="eval"><div class="sc">88</div><div class="dot"></div><div class="label">② 评估期</div><div class="sub">T+30 · 授信定段</div></div>
